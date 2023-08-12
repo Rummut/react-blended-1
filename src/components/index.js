@@ -8,3 +8,4 @@ export * from 'components/ForbesListItem/ForbesListItem.jsx';
 export * from 'components/Statistics/Statistics.jsx';
 export * from 'components/StatisticItem/StatisticItem.jsx';
 export * from 'components/CryptoHistory/CryptoHistory.jsx';
+export * from 'components/Section/Section'

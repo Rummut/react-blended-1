@@ -6,31 +6,52 @@ import {
   Statistics,
   ForbesList,
   CryptoHistory,
+  CustomSection,
 } from 'components';
+import article from 'data/article.json';
 
 export const App = () => {
+  const total = 10;
   return (
     <Section>
       <Container>
-        <Heading marginBottom="50px" textAlign="center">
+        <Heading marginBottom="50px" textAlign="center" color="tomato">
           Task 1
         </Heading>
-        <BlogCard />
+        <CustomSection title="section 1 blogcard" color="red">
+          {total > 0 && (
+            <BlogCard
+              poster={article.poster}
+              tag={article.tag}
+              title={article.title}
+              description={article.description}
+              userName={article.name}
+              avatar={article.avatar}
+              postedAt={article.postedAt}
+            />
+          )}
+        </CustomSection>
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 2
         </Heading>
-        <Statistics />
+        <CustomSection>
+          <Statistics />
+        </CustomSection>
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 3
         </Heading>
-        <ForbesList />
+        <CustomSection>
+          <ForbesList />
+        </CustomSection>
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 4
         </Heading>
-        <CryptoHistory />
+        <CustomSection>
+          <CryptoHistory />
+        </CustomSection>
       </Container>
     </Section>
   );
