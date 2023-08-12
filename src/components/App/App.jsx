@@ -8,12 +8,14 @@ import {
   CryptoHistory,
   CustomSection,
 } from 'components';
+import { ToDo } from 'components/Todo/Todo';
 import article from 'data/article.json';
 
 export const App = () => {
   const total = 10;
   return (
     <Section>
+      <ToDo/>
       <Container>
         <Heading marginBottom="50px" textAlign="center" color="tomato">
           Task 1
